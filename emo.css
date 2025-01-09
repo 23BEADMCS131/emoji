@@ -1,0 +1,171 @@
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scroll-container {
+    overflow: hidden;
+    background: linear-gradient(to right, white,pink,yellow,lightblue,yellow,pink,white);
+    padding: 10px 0;
+    position: relative;
+    
+    
+}
+
+.scroll-text {
+    display: inline-block;
+   margin-top: 50px;
+    color: #333;
+    
+}
+
+
+body{
+    background-image: url('Screenshot 2025-01-09 210400.png');
+    background-repeat: no-repeat;
+   background-size: cover;
+    background-attachment: fixed;
+
+}
+
+
+body {
+  font-size: x-large;
+    text-align: center;
+}
+
+
+#y:hover{
+    transform: scale(0.9);
+}
+
+#face {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color:rgb(202, 202, 122);
+    border-radius: 50%;
+    margin-top: 200px;
+    animation: dance 6s infinite ease-out;
+    border: 5px solid black;
+    padding: 10px;
+}
+
+
+@keyframes dance {
+    0%, 100% {
+        transform: rotate(0deg); 
+    }
+    25% {
+        transform:  rotate(-10deg); 
+    }
+    50% {
+        transform:  rotate(10deg); 
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+#ear {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#ear1, #ear2 {
+    width: 50px;
+    height: 150px;
+    background-color:rgb(202, 202, 122);
+    border-radius: 50%;
+    position: absolute;
+}
+
+#ear1 {
+    top: -80px;
+    left: 40px;
+}
+
+#ear2 {
+    top: -80px;
+    right: 40px;
+}
+
+#eyes {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#eye1, #eye2 {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+#emo-ball1, #emo-ball2 {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    animation: move-eyes 2s infinite ease-in-out;
+}
+
+@keyframes move-eyes {
+    0%, 100% {
+        top: 10px; 
+    }
+    50% {
+        top: 20px; 
+    }
+}
+
+
+
+#emo-nose {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+   
+}
+
+#emo-mouth {
+    width: 100px;
+    height: 50px;
+    border-top: 90px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: open-mouth 2s infinite ease-in-out;
+}
+
+@keyframes open-mouth {
+    0%, 100% {
+        height: 50px;
+        border-top-width: 24px;
+    }
+    50% {
+        height: 70px;
+        border-top-width: 5px;
+    }
+}
